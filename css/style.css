@@ -1,0 +1,533 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+header {
+  height: 100px;
+}
+body {
+  height: 100vh;
+}
+
+footer {
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#search {
+  border: 2px solid #491361;
+  border-radius: 4px;
+}
+
+#news .btn {
+  background-color: #491361;
+  color: white;
+  font-weight: 600;
+}
+
+#news a {
+  margin: 10px auto;
+}
+
+#default {
+  background-color: #000000;
+  color: white;
+  margin-top: 100px;
+  padding: 150px;
+  border: 8px solid #49156e;
+  border-radius: 8px;
+}
+.purple {
+  color: #6a2181;
+  font-size: larger;
+  font-weight: 600;
+}
+
+#search {
+  line-height: 2rem;
+  vertical-align: middle;
+}
+#getInfo {
+  line-height: 1.4rem;
+  vertical-align: middle;
+}
+
+.btn-primary {
+  background-color: #1e88e5;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 5;
+}
+
+.btn-primary p {
+  margin: 0;
+}
+
+@media only screen and (max-width: 621px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 15px;
+    align-content: stretch;
+    grid-template-areas:
+      "header"
+      "aside1"
+      "content"
+      "aside2"
+      "footer";
+  }
+  #default {
+    margin: 20px;
+  }
+
+  header {
+    display: grid;
+    grid-area: header;
+    color: white;
+    height: 80px;
+
+    width: 100%;
+    background-image: linear-gradient(
+      to bottom right,
+      purple,
+      rgb(39, 64, 209)
+    );
+  }
+  header h1 {
+    justify-self: center;
+    align-self: center;
+  }
+
+  form {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  /*    Styling for 1st aside  */
+  .keyData {
+    grid-area: aside1;
+    align-self: center;
+    justify-self: center;
+  }
+  #stockName {
+    text-align: center;
+  }
+  #quote p {
+    margin: 10px 15px;
+  }
+  .quoteVal {
+    color: green;
+  }
+  #quote {
+    display: flex;
+    width: min-content;
+  }
+
+  .info {
+    grid-area: content;
+    margin-top: 10px;
+    justify-self: center;
+    align-self: start;
+  }
+
+  #news {
+    grid-area: aside2;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+  }
+  .newsContainer {
+    border-top: 1px solid lightgray;
+    margin: 13px;
+  }
+
+  .newsImg {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  footer {
+    height: 4rem;
+    grid-area: footer;
+    align-self: end;
+    width: 100%;
+    background-image: linear-gradient(
+      to bottom right,
+      purple,
+      rgb(39, 64, 209)
+    );
+  }
+  .infoTitle {
+    margin: 12px auto;
+  }
+
+  .metricName {
+    font-weight: bold;
+  }
+
+  .metricValue {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .metricValue p {
+    color: white;
+    width: min-content;
+    background-color: rgb(67, 56, 82);
+    border-radius: 5px;
+    padding: 5px;
+  }
+}
+/*   Second breakpoint. Devices between phone and Ipad */
+@media only screen and (min-width: 622px) and (max-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: 50px 2fr 1fr 50px;
+    grid-template-rows: 100px auto 1fr auto;
+    grid-gap: 10px;
+    grid-template-areas:
+      "header header header header "
+      "aside1 aside1 aside1 aside1 "
+      " . aside2 content . "
+      "footer footer footer footer";
+  }
+  #default {
+    margin: 20px;
+  }
+  header {
+    grid-area: header;
+    display: grid;
+    height: 80px;
+    width: 100%;
+    color: white;
+    background-image: linear-gradient(
+      to bottom right,
+      purple,
+      rgb(39, 64, 209)
+    );
+  }
+  header h1 {
+    justify-self: center;
+    align-self: center;
+  }
+  .keyData {
+    grid-area: aside1;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info {
+    grid-area: content;
+
+    margin-top: 10px;
+  }
+  /*   News  */
+  #news {
+    grid-area: aside2;
+  }
+
+  .newsContainer {
+    width: 100%;
+    border-top: 1px solid lightgray;
+  }
+
+  .newsImg {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  footer {
+    grid-area: footer;
+    align-self: end;
+    height: 4rem;
+    width: 100%;
+    background-image: linear-gradient(
+      to bottom right,
+      purple,
+      rgb(39, 64, 209)
+    );
+  }
+  form {
+    text-align: center;
+    margin: 15px auto;
+  }
+
+  #stockName {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  #quote p {
+    margin: 10px 15px;
+  }
+
+  .quoteVal {
+    color: green;
+  }
+
+  #quote {
+    display: flex;
+    width: min-content;
+  }
+
+  .infoTitle {
+    margin: 12px auto;
+  }
+
+  .metricName {
+    font-weight: bold;
+  }
+
+  .metricValue {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .metricValue p {
+    color: white;
+    width: min-content;
+    background-color: rgb(67, 56, 82);
+    border-radius: 5px;
+    padding: 5px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  body {
+    display: grid;
+    grid-template-columns: 60px 3fr 1fr 60px;
+    grid-template-rows: auto auto 1fr auto;
+    grid-gap: 10px;
+    grid-template-areas:
+      "header header header header "
+      " . aside1 aside1 . "
+      " . aside2 content . "
+      "footer footer footer footer";
+  }
+  header {
+    grid-area: header;
+    display: grid;
+    height: 80px;
+    width: 100%x;
+    color: white;
+    background-image: linear-gradient(
+      to bottom right,
+      purple,
+      rgb(39, 64, 209)
+    );
+  }
+
+  header h1 {
+    justify-self: center;
+    align-self: center;
+  }
+  .keyData {
+    grid-area: aside1;
+    justify-self: center;
+    display: block;
+  }
+  aside h4 {
+    text-align: center;
+  }
+
+  #quote {
+    display: flex;
+  }
+  #quote p {
+    margin: 10px 15px;
+  }
+  .quoteVal {
+    color: green;
+  }
+
+  .info {
+    margin-top: 10px;
+    grid-area: content;
+    justify-self: center;
+    justify-self: center;
+    align-self: start;
+  }
+  .metricName {
+    font-weight: 500;
+  }
+
+  .metricValue p {
+    color: white;
+    width: min-content;
+    background-color: rgb(67, 56, 82);
+    border-radius: 5px;
+    padding: 2px 5px;
+  }
+  #news {
+    grid-area: aside2;
+  }
+
+  #news .btn {
+    margin-left: 0;
+  }
+
+  .newsContainer {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "headline  img"
+      "summary  img";
+    border-top: 1px solid lightgray;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  .newsHeadline {
+    grid-area: headline;
+  }
+  .newsSummary {
+    grid-area: summary;
+  }
+  .newsImg {
+    grid-area: img;
+    justify-self: center;
+    align-self: center;
+  }
+  .newsImg {
+    width: 80%;
+    object-fit: contain;
+    justify-self: end;
+  }
+  footer {
+    grid-area: footer;
+    align-self: end;
+    height: 4rem;
+    width: 100%;
+    background-image: linear-gradient(
+      to bottom right,
+      purple,
+      rgb(39, 64, 209)
+    );
+  }
+  form {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-rows: auto auto auto 1fr auto;
+    grid-template-areas:
+      "header header header header header"
+      " . aside1 aside1 aside1 . "
+      " . aside2 aside2 content. "
+      " . . . . . "
+      "footer footer footer footer footer";
+  }
+  header {
+    grid-area: header;
+    display: grid;
+    height: 90px;
+    width: 100%x;
+    color: white;
+    background-image: linear-gradient(
+      to bottom right,
+      purple,
+      rgb(39, 64, 209)
+    );
+  }
+
+  header h1 {
+    justify-self: center;
+    align-self: center;
+  }
+  .keyData {
+    grid-area: aside1;
+    justify-self: center;
+    display: block;
+  }
+  aside h4 {
+    text-align: center;
+  }
+  #quote {
+    display: flex;
+  }
+  #quote p {
+    margin: 10px 15px;
+  }
+  .quoteVal {
+    color: green;
+  }
+
+  .info {
+    grid-area: content;
+    justify-self: center;
+    justify-self: center;
+    align-self: start;
+    margin-left: 2em;
+  }
+  .metricName {
+    font-weight: 500;
+  }
+
+  .metricValue p {
+    color: white;
+    width: min-content;
+    background-color: rgb(67, 56, 82);
+    border-radius: 5px;
+    padding: 2px 5px;
+  }
+  #news {
+    grid-area: aside2;
+  }
+  .newsContainer {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "headline  img"
+      "summary  img";
+    border-top: 1px solid lightgray;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+  .newsHeadline {
+    grid-area: headline;
+  }
+  .newsSummary {
+    grid-area: summary;
+  }
+  .newsImg {
+    grid-area: img;
+    justify-self: center;
+    align-self: center;
+    width: 80%;
+    object-fit: contain;
+    justify-self: end;
+  }
+  #news .btn {
+    margin-left: 0;
+  }
+
+  footer {
+    grid-area: footer;
+    height: 4rem;
+    width: 100%;
+    background-image: linear-gradient(
+      to bottom right,
+      purple,
+      rgb(39, 64, 209)
+    );
+  }
+
+  form {
+    text-align: center;
+    margin: 15px auto;
+  }
+}
