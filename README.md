@@ -16,7 +16,7 @@ A free service that provides basic news and fundamentals on a security only from
 
 ## Getting Started
 
-[Click here]() to see working app.
+[Click here](https://mystifying-montalcini-373ea5.netlify.app/) to see working app.
 
 ## Future Enhancements
 
