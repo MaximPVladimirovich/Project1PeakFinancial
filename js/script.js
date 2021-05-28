@@ -45,10 +45,10 @@ $(function () {
     function displayGetQuote(data) {
         $(`#quote`).html(` `)
         let $quote = $(`#quote`)
-        $quote.append($(`<p>`).attr(`class`, `quoteTitle`).html(`Current: <span class="quoteVal"> ${data.c}</span>`))
-        $quote.append($(`<p>`).attr(`class`, `quoteTitle`).html(`High: <span class="quoteVal"> ${data.h}</span>`))
-        $quote.append($(`<p>`).attr(`class`, `quoteTitle`).html(`Low: <span class="quoteVal"> ${data.l}</span>`))
-        $quote.append($(`<p>`).attr(`class`, `quoteTitle`).html(`Open: <span class="quoteVal"> ${data.o}</span>`))
+        $quote.append($(`<p>`).attr(`class`, `quoteTitle`).html(`Current: $<span class="quoteVal"> ${data.c}</span>`))
+        $quote.append($(`<p>`).attr(`class`, `quoteTitle`).html(`High: $<span class="quoteVal"> ${data.h}</span>`))
+        $quote.append($(`<p>`).attr(`class`, `quoteTitle`).html(`Low: $<span class="quoteVal"> ${data.l}</span>`))
+        $quote.append($(`<p>`).attr(`class`, `quoteTitle`).html(`Open: $<span class="quoteVal"> ${data.o}</span>`))
     }
 
     function handleGetFinancials(e) {
