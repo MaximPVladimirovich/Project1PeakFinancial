@@ -7,6 +7,7 @@ A free service that provides basic news and fundamentals on a security only from
 - HTML5
 - CSS3
 - JavaScript/jQuery
+- Bootstrap
 - [Finnhub API](https://finnhub.io/)
 
 ## Screenshots
